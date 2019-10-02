@@ -1,2 +1,1 @@
-# React-App-Boilerplate
-React App Boilerplate.
+# Redux-App

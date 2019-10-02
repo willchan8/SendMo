@@ -1,0 +1,4 @@
+module.exports = {
+  CLIENT_ID: 'INSERT_CLIENT_ID',
+  CLIENT_SECRET: 'INSERT_CLIENT_SECRET',
+};
