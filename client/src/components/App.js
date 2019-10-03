@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import LoginForm from './LoginForm';
+import CreateAccount from './CreateAccount';
 import TransForm from './TransForm';
-import TransList from './TransList';
+import TransactionList from './TransactionList';
 
 class App extends Component {
 constructor(props) {
@@ -12,11 +12,11 @@ constructor(props) {
   render() {
     return (
       <div>
-      <LoginForm />
+      <CreateAccount />
       <hr />
       <TransForm />
       <hr />
-      <TransList />
+      <TransactionList />
     </div>
     )
   }

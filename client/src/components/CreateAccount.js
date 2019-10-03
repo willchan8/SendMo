@@ -4,7 +4,7 @@ import { Header, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createUser } from '../actions';
 
-class LoginForm extends Component {
+class CreateAccount extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,8 +64,8 @@ class LoginForm extends Component {
   }
 }
 
-LoginForm.propTypes = {
+CreateAccount.propTypes = {
   createUser: PropTypes.func.isRequired
 };
 
-export default connect(null, { createUser })(LoginForm);
+export default connect(null, { createUser })(CreateAccount);
