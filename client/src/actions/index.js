@@ -1,4 +1,4 @@
-import { GET_TRANSACTIONS, CREATE_TRANSACTION, CREATE_USER } from './actionTypes';
+import { GET_TRANSACTIONS, CREATE_TRANSACTION, CREATE_USER, CREATE_NODE } from './actionTypes';
 import axios from 'axios';
 
 export const getTransactions = () => dispatch => {
@@ -29,13 +29,22 @@ export const createTransaction = (transaction) => dispatch => {
     );
 }
 
-
-export const createUser= (userInfo) => dispatch => {
+export const createUser = (userInfo) => dispatch => {
   axios.post('/api/users/create', userInfo)
   .then(user => 
     dispatch({
       type: CREATE_USER,
-      payload: user.data.json
+      payload: user.data
+    })
+  );
+}
+
+export const createNode = (accountInfo) => dispatch => {
+  axios.post('/api/users/node/create', accountInfo)
+  .then(node => 
+    dispatch({
+      type: CREATE_NODE,
+      payload: node.data
     })
   );
 }

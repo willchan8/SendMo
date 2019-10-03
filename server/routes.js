@@ -35,8 +35,6 @@ router.post('/users/create', (req, res) => {
     },
   };
 
-  // res.send(createPayload);
-
   Users.create(
     client,
     keys.FINGERPRINT,
@@ -52,7 +50,7 @@ router.post('/users/create', (req, res) => {
 });
 
 // Create an ACH-US Node through Account and Routing Number Details
-router.post('/node/create', (req, res) => {
+router.post('/users/node/create', (req, res) => {
   const achPayload = {
     type: 'ACH-US',
     info: {
@@ -66,7 +64,7 @@ router.post('/node/create', (req, res) => {
   };
   
   Nodes.create(
-    user,
+    req.body.currentUser,
     achPayload,
     (err, nodeResponse) => {
       if (err) {

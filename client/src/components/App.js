@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import CreateAccount from './CreateAccount';
-import TransForm from './TransForm';
+import CreateUser from './CreateUser';
+import CreateNode from './CreateNode';
+import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
 
 class App extends Component {
@@ -12,9 +13,11 @@ constructor(props) {
   render() {
     return (
       <div>
-      <CreateAccount />
+      <CreateUser />
       <hr />
-      <TransForm />
+      <CreateNode />
+      <hr />
+      <TransactionForm />
       <hr />
       <TransactionList />
     </div>

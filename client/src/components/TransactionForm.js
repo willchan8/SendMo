@@ -4,7 +4,7 @@ import { Header, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createTransaction } from '../actions';
 
-class TransForm extends Component {
+class TransactionForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,7 +35,7 @@ class TransForm extends Component {
 
     return (
       <FormContainer>
-        <Header>Add Transaction</Header>
+        <Header>Create Transaction</Header>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Transaction: </label>
@@ -54,8 +54,8 @@ class TransForm extends Component {
   }
 }
 
-TransForm.propTypes = {
+TransactionForm.propTypes = {
   createTransaction: PropTypes.func.isRequired
 };
 
-export default connect(null, { createTransaction })(TransForm);
+export default connect(null, { createTransaction })(TransactionForm);
