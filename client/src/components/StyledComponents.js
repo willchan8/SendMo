@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
   background: #FFFFFF;
-  margin: 1rem auto;
+  margin: 2rem auto;
   max-width: 400px;
   padding: 1rem 1.5rem;
   border: 1px solid #FBFBFB;
   border-radius: 4px;
-  box-shadow: 0px 2px 6px 2px rgba(0,0,0, 0.1);
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
   font-family: 'Roboto', sans-serif;
 `;
 

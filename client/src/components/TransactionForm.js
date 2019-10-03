@@ -8,8 +8,8 @@ class TransactionForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      body: '',
+      amount: '',
+      receiverNodeID: '5c8ac55542edab2b2665cbf1',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,29 +22,33 @@ class TransactionForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { title, body } = this.state;
-    this.props.createTransaction({ title, body });
+
+    const { createTransaction, currentNode } = this.props;
+    const { amount, receiverNodeID } = this.state;
+
+    createTransaction({ amount, receiverNodeID, currentNode });
+
     this.setState({
-      title: '',
-      body: '',
+      amount: '',
+      receiverNodeID: '',
     });
   }
 
   render() {
-    const { title, body } = this.state;
+    const { amount, receiverNodeID } = this.state;
 
     return (
       <FormContainer>
         <Header>Create Transaction</Header>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label>Transaction: </label>
-            <Input type="text" name="title" onChange={this.handleChange} value={title} />
+            <label>Amount: </label>
+            <Input type="text" name="amount" onChange={this.handleChange} value={amount} />
           </div>
 
           <div>
-            <label>Amount: </label>
-            <Input type="text" name="body" onChange={this.handleChange} value={body} />
+            <label>ReceiverNodeID: </label>
+            <Input type="text" name="receiverNodeID" onChange={this.handleChange} value={receiverNodeID} />
           </div>
 
           <Button primary type="submit">Submit</Button>
@@ -55,7 +59,12 @@ class TransactionForm extends Component {
 }
 
 TransactionForm.propTypes = {
-  createTransaction: PropTypes.func.isRequired
+  createTransaction: PropTypes.func.isRequired,
+  currentNode: PropTypes.object.isRequired,
 };
 
-export default connect(null, { createTransaction })(TransactionForm);
+const mapStateToProps = state => ({
+  currentNode: state.currentNode,
+});
+
+export default connect(mapStateToProps, { createTransaction })(TransactionForm);

@@ -50,7 +50,7 @@ router.post('/users/create', (req, res) => {
 });
 
 // Create an ACH-US Node through Account and Routing Number Details
-router.post('/users/node/create', (req, res) => {
+router.post('/users/nodes/create', (req, res) => {
   const achPayload = {
     type: 'ACH-US',
     info: {
@@ -77,43 +77,24 @@ router.post('/users/node/create', (req, res) => {
 
 
 // Create a Transaction
-router.post('/transaction/create', (req, res) => {
-  // const createPayload = {
-  //   to: {
-  //     type: req.body.receiverNode.type,
-  //     id: req.body.receiverNode._id,
-  //   },
-  //   amount: {
-  //     amount: req.body.amount,
-  //     currency: 'USD',
-  //   },
-  //   extra: {
-  //     note: req.body.description,
-  //     ip: Helpers.getUserIP(),
-  //   },
-  // };
-
+router.post('/users/nodes/transactions/create', (req, res) => {
   const createPayload = {
     to: {
-      type: 'SYNAPSE-US',
-      id: '5cb7c9bf5f264e008db08bf9'
+      type: "ACH-US",
+      id: req.body.receiverNodeID,
     },
     amount: {
-      amount: 1.10,
-      currency: 'USD'
+      amount: req.body.amount,
+      currency: "USD",
     },
     extra: {
-      supp_id: '1283764wqwsdd34wd13212',
-      note: 'Deposit to bank account',
-      webhook: 'http://requestb.in/q94kxtq9',
-      process_on: 1,
-      ip: Helpers.getUserIP()
-    },
+      ip: "127.0.0.1",
+      note: "Test transaction.",
+    }
   };
 
   Transactions.create(
-    // req.body.fromNode,
-
+    req.body.currentNode,
     createPayload, 
     (err, transResponse) => {
     if (err) {
@@ -132,23 +113,5 @@ router.get('/transaction/all', (req, res) => {
     res.send(transResponse)
   });
 });
-
-// Get All Users
-// router.get('/users/get-users', (req, res) => {  
-//   let options = {
-//     ip_address: Helpers.getUserIP(),
-//   };
-  
-//   Users.get(
-//     client,
-//     options,
-//     function(err, usersResponse) {
-//       if (err) {
-//         res.send(err)
-//       }
-//       res.send(usersResponse.users);
-//     }
-//   );
-// });
 
 module.exports = router;

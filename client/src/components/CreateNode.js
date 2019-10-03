@@ -25,9 +25,8 @@ class CreateNode extends Component {
   handleSubmit(e) {
     e.preventDefault();
     
-    const { createNode, currentUser } = this.props
+    const { createNode, currentUser } = this.props;
     const { nickname, name, account_num, routing_num } = this.state;
-
 
     createNode({ nickname, name, account_num, routing_num, currentUser });
   }
@@ -41,22 +40,22 @@ class CreateNode extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Account Nickname: </label>
-            <Input type="text" name="nickname" onChange={this.handleChange} value={nickname} />
+            <Input type="text" name="nickname" onChange={this.handleChange} value={nickname} pattern=".{2,}" required title="Minimum 2 Characters" />
           </div>
 
           <div>
             <label>Name on Account: </label>
-            <Input type="text" name="name" onChange={this.handleChange} value={name} />
+            <Input type="text" name="name" onChange={this.handleChange} value={name} pattern=".{2,}" required title="Minimum 2 Characters" />
           </div>
 
           <div>
             <label>Checking Account Number: </label>
-            <Input type="text" name="account_num" onChange={this.handleChange} value={account_num} />
+            <Input type="text" name="account_num" onChange={this.handleChange} value={account_num} pattern=".{11}" required title="Must Be 11 Digits Long" />
           </div>
 
           <div>
             <label>Checking Routing Number: </label>
-            <Input type="text" name="routing_num" onChange={this.handleChange} value={routing_num} />
+            <Input type="text" name="routing_num" onChange={this.handleChange} value={routing_num} pattern=".{9}" required title="Must Be 9 Digits Long" />
           </div>
 
           <Button primary type="submit">Submit</Button>

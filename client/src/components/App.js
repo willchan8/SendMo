@@ -12,13 +12,10 @@ constructor(props) {
 
   render() {
     return (
-      <div>
+      <div style={{position: 'relative'}}>
       <CreateUser />
-      <hr />
       <CreateNode />
-      <hr />
       <TransactionForm />
-      <hr />
       <TransactionList />
     </div>
     )

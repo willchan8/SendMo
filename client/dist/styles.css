@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 /* Global CSS variables */
-:root {
+/* :root {
   --mainColor: rgb(0, 190, 162);
   --bgColor: rgb(255, 255, 255);
   --fontColor1: rgb(34, 34, 34);
@@ -10,7 +10,7 @@
   --accentColor2: rgb(88, 128, 244);
   --mainFont: Helvetica, sans-serif;
   --secFont: Source Sans Pro;
-}
+} */
 
 html {
   box-sizing: border-box;
@@ -22,17 +22,7 @@ html {
 }
 
 body {
-  background: var(--bgColor);
-  /* text-align: center; */
   font-family: "Roboto";
-}
-
-h1 {
-  font-family: var(--mainFont);
-}
-
-p {
-  font-family: var(--secFont);
 }
 
 .title {
