@@ -1,3 +1,5 @@
-export const FETCH_POSTS = 'FETCH_POSTS';
+export const GET_TRANSACTIONS = 'GET_TRANSACTIONS';
 
-export const NEW_POST = 'NEW_POST';
+export const CREATE_TRANSACTION = 'CREATE_TRANSACTION';
+
+export const CREATE_USER = 'CREATE_USER';

@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import PostList from './PostList';
-import PostForm from './PostForm';
+import LoginForm from './LoginForm';
+import TransForm from './TransForm';
+import TransList from './TransList';
 
-function App() {
-  return (
-    <div>
-      React App!!!
-      <PostForm />
+class App extends Component {
+constructor(props) {
+  super(props);
+}
+
+  render() {
+    return (
+      <div>
+      <LoginForm />
       <hr />
-      <PostList />
+      <TransForm />
+      <hr />
+      <TransList />
     </div>
-  );
+    )
+  }
 }
 
 export default App;

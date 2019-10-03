@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 /* Global CSS variables */
 :root {
@@ -23,7 +23,8 @@ html {
 
 body {
   background: var(--bgColor);
-  text-align: center;
+  /* text-align: center; */
+  font-family: "Roboto";
 }
 
 h1 {

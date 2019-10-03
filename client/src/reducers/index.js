@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import postReducer from './postReducer';
+import transReducer from './transReducer';
+import userReducer from './userReducer';
 
 const rootReducer = combineReducers({
-  posts: postReducer
+  transactions: transReducer,
+  currentUser: userReducer
 })
 
 export default rootReducer;

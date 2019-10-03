@@ -1,10 +1,10 @@
-import { FETCH_POSTS, NEW_POST } from '../actions/actionTypes';
+import { GET_TRANSACTIONS, CREATE_TRANSACTION } from '../actions/actionTypes';
 
 export default (state = [], action) => {
   switch(action.type) {
-    case FETCH_POSTS:
+    case GET_TRANSACTIONS:
       return action.payload;
-    case NEW_POST:
+    case CREATE_TRANSACTION:
       return [
         action.payload,
         ...state
