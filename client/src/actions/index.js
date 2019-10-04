@@ -19,7 +19,7 @@ export const createUser = (userInfo, history) => dispatch => {
   )
   .then(() => history.push('/node'))
   .catch(error => {
-    console.log(error)
+    alert(`${error}. Unable to Create User.`);
   });
 }
 
@@ -41,7 +41,7 @@ export const createNode = (accountInfo, history) => dispatch => {
   )
   .then(() => history.push('/dashboard'))
   .catch(error => {
-    console.log(error)
+    alert(`${error}. Unable to Create Node.`);
   });
 }
 
@@ -54,6 +54,6 @@ export const createTransaction = (nodeInfo) => dispatch => {
     })
   )
   .catch(error => {
-    console.log(error)
+    alert(`${error}. Unable to Create Transaction.`);
   });
 }

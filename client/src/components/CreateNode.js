@@ -68,8 +68,6 @@ class CreateNode extends Component {
           </div>
 
           <Button type="submit">Submit</Button>
-
-          <Link to="/dashboard"><Button>Go To Dashboard</Button></Link>
         </form>
       </FormContainer>
     )

@@ -69,8 +69,6 @@ class CreateAccount extends Component {
 
           <Button type="submit">Submit</Button>
         </form>
-
-        <Link to="/node"><Button>Go To Node</Button></Link>
       </FormContainer>
     )
   }
