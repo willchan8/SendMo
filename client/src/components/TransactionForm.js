@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, FormContainer, Input, Button } from './StyledComponents'; 
+import { Header, FormContainer, Input, Button, Select } from './StyledComponents'; 
 import { connect } from 'react-redux';
 import { createTransaction } from '../actions';
 
@@ -42,6 +42,13 @@ class TransactionForm extends Component {
       <FormContainer>
         <Header>Create Transaction</Header>
         <form onSubmit={this.handleSubmit}>
+          <div>
+            <label>To: </label>
+              <Select>
+                <option>Another Test Name</option>
+              </Select>
+          </div>
+
           <div>
             <label>Amount: </label>
             <Input type="text" name="amount" onChange={this.handleChange} value={amount} />

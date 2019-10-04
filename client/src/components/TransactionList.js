@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getTransactions } from '../actions';
 import { Header } from './StyledComponents'; 
 
 class TransactionList extends Component {
@@ -31,7 +30,6 @@ class TransactionList extends Component {
 }
 
 TransactionList.propTypes = {
-  getTransactions: PropTypes.func.isRequired,
   transactions: PropTypes.array.isRequired,
 }
 
@@ -39,4 +37,4 @@ const mapStateToProps = state => ({
   transactions: state.transactions,
 });
 
-export default connect(mapStateToProps, { getTransactions })(TransactionList);
+export default connect(mapStateToProps)(TransactionList);

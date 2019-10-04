@@ -36,3 +36,14 @@ export const Button = styled.button`
   border-radius: 3px;
   cursor: pointer;
 `;
+
+export const Select = styled.select`
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+`;

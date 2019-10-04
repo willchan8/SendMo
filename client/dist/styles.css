@@ -6,6 +6,8 @@ html {
 
 body {
   font-family: "Roboto";
+  display: flex;
+  justify-content: center;
 }
 
 /* Extra small devices (phones, 600px and down) */

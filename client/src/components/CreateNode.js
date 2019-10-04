@@ -29,8 +29,7 @@ class CreateNode extends Component {
     const { createNode, currentUser, history } = this.props;
     const { nickname, name, account_num, routing_num } = this.state;
 
-    createNode({ nickname, name, account_num, routing_num, currentUser });
-    history.push('/dashboard');
+    createNode({ nickname, name, account_num, routing_num, currentUser }, history);
   }
 
   render() {

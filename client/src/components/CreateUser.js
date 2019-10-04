@@ -29,9 +29,8 @@ class CreateAccount extends Component {
     const { createUser, history } = this.props;
     const { email, phone_numbers, legal_names } = this.state;
 
-    createUser({ email, phone_numbers, legal_names });
-
-    history.push('/node');
+    createUser({ email, phone_numbers, legal_names }, history);
+    // history.push('/node');
   }
 
   render() {
@@ -43,7 +42,7 @@ class CreateAccount extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Email: </label>
-            <Input type="text" name="email" onChange={this.handleChange} value={email} placeholder='example@synapsefi.com' required />
+            <Input type="text" name="email" onChange={this.handleChange} value={email} pattern=".{3,}" placeholder='example@synapsefi.com' required title="Minimum 3 Characters" />
           </div>
 
           <div>
@@ -53,12 +52,12 @@ class CreateAccount extends Component {
 
           <div>
             <label>Phone Number: </label>
-            <Input type="tel" name="phone_numbers"  onChange={this.handleChange} value={phone_numbers} placeholder='555-555-5555' required />
+            <Input type="tel" name="phone_numbers"  onChange={this.handleChange} value={phone_numbers} pattern=".{3,}" placeholder='555-555-5555' required title="Minimum 3 Characters"/>
           </div>
 
           <div>
             <label>Legal Name: </label>
-            <Input type="text" name="legal_names" onChange={this.handleChange} value={legal_names} placeholder='Enter Full Name' required />
+            <Input type="text" name="legal_names" onChange={this.handleChange} value={legal_names} pattern=".{3,}" placeholder='Enter Full Name' required title="Minimum 3 Characters"/>
           </div>
 
           <Button type="submit">Submit</Button>
