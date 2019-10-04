@@ -89,8 +89,8 @@ router.post('/users/nodes/transactions/create', (req, res) => {
     },
     extra: {
       ip: "127.0.0.1",
-      note: "Test transaction.",
-    }
+      note: req.body.note,
+    },
   };
 
   Transactions.create(
@@ -101,16 +101,6 @@ router.post('/users/nodes/transactions/create', (req, res) => {
       res.send(err);
     } 
     res.send(transResponse);
-  });
-});
-
-
-// getAllTransaction
-router.get('/transaction/all', (req, res) => {
-  const node = req.body;
-  Transactions.get(node, null, (err, transResponse) => {
-    // error or transaction object
-    res.send(transResponse)
   });
 });
 

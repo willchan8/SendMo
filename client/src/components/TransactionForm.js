@@ -9,6 +9,7 @@ class TransactionForm extends Component {
     super(props);
     this.state = {
       amount: '',
+      note: '',
       receiverNodeID: '5c8ac55542edab2b2665cbf1',
     };
 
@@ -24,18 +25,18 @@ class TransactionForm extends Component {
     e.preventDefault();
 
     const { createTransaction, currentNode } = this.props;
-    const { amount, receiverNodeID } = this.state;
+    const { amount, note, receiverNodeID } = this.state;
 
-    createTransaction({ amount, receiverNodeID, currentNode });
+    createTransaction({ amount, note, receiverNodeID, currentNode });
 
     this.setState({
       amount: '',
-      receiverNodeID: '',
+      note: '',
     });
   }
 
   render() {
-    const { amount, receiverNodeID } = this.state;
+    const { amount, note } = this.state;
 
     return (
       <FormContainer>
@@ -47,8 +48,8 @@ class TransactionForm extends Component {
           </div>
 
           <div>
-            <label>ReceiverNodeID: </label>
-            <Input type="text" name="receiverNodeID" onChange={this.handleChange} value={receiverNodeID} />
+            <label>What is it for?: </label>
+            <Input type="text" name="note" onChange={this.handleChange} value={note} />
           </div>
 
           <Button primary type="submit">Submit</Button>

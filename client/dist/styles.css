@@ -1,34 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-/* Global CSS variables */
-/* :root {
-  --mainColor: rgb(0, 190, 162);
-  --bgColor: rgb(255, 255, 255);
-  --fontColor1: rgb(34, 34, 34);
-  --fontColor2: rgb(55, 54, 74);
-  --accentColor1: rgb(28, 57, 221);
-  --accentColor2: rgb(88, 128, 244);
-  --mainFont: Helvetica, sans-serif;
-  --secFont: Source Sans Pro;
-} */
-
 html {
   box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
 }
 
 body {
   font-family: "Roboto";
-}
-
-.title {
-  border-bottom: 4px solid var(--mainColor);
-  padding: 1rem;
-  margin-bottom: 0;
 }
 
 /* Extra small devices (phones, 600px and down) */

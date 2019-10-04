@@ -27,7 +27,7 @@ export const getTransactions = () => dispatch => {
     .then(transactions =>
       dispatch({
         type: GET_TRANSACTIONS,
-        payload: transactions.json
+        payload: transactions
       })
     );
 }
@@ -37,7 +37,7 @@ export const createTransaction = (nodeInfo) => dispatch => {
     .then(transaction =>
       dispatch({
         type: CREATE_TRANSACTION,
-        payload: transaction
+        payload: transaction.data.json
       })
     );
 }

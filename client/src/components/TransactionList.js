@@ -4,24 +4,27 @@ import { connect } from 'react-redux';
 import { getTransactions } from '../actions';
 
 class TransactionList extends Component {
-  componentDidMount() {
-    // this.props.getTransactions();
-  }
 
   render() {
     return (
       <div>
-        <h1>Posts</h1>
-        {/* {this.props.transactions.map(transaction => (
-          // <div key={trans.id}>
-          //   <h3>{trans.title}</h3>
-          //   <p>{trans.body}</p>
-          // </div>
-          <div>
-            <h3>{transaction.title}</h3>
-            <p>{transaction.body}</p>
+        <h1>Your Transactions</h1>
+        {this.props.transactions.map(transaction => (
+          <div key={transaction._id}>
+            <div>{console.log(transaction)}</div>
+            <h3>Transaction ID: {transaction._id}</h3>
+            <h3>Date: 
+              {`
+                ${(new Date(transaction.extra.created_on)).getMonth() + 1}/
+                ${(new Date(transaction.extra.created_on)).getDate()}/
+                ${(new Date(transaction.extra.created_on)).getFullYear()}
+              `}
+            </h3>
+            <h3>To: {transaction.to.user.legal_names[0]}</h3>
+            <h3>Description: {transaction.extra.note}</h3>
+            <h3>Amount: ${transaction.amount.amount}</h3>
           </div>
-        ))} */}
+        ))}
       </div>
     )
   }
