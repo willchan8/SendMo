@@ -6,10 +6,10 @@ import Spinner from 'react-bootstrap/Spinner';
 const Loader = props => 
   (
     <FormContainer>
-      <Aligner>
+      <div className="center">
         <Spinner animation="border" />
         <div className='pad'>{`Creating ${props.type}...`}</div>
-      </Aligner>
+      </div>
     </FormContainer>
   )
 

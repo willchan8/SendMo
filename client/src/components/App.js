@@ -5,16 +5,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CreateUser from './CreateUser';
 import CreateNode from './CreateNode';
 import Dashboard from './Dashboard';
-import Loader from './Loader';
+import Header from './Header';
 
 const App = ({ store }) => (
   <Provider store={store}>
+    <Header />
     <Router>
       <Switch>
-        <Route exact path="/" component={CreateUser} />
+        {/* <Route exact path="/" component={CreateUser} />
         <Route path="/node" component={CreateNode} />
-        <Route path="/dashboard" component={Dashboard} />
-        {/* <Route path="/" component={Loader} /> */}
+        <Route path="/dashboard" component={Dashboard} /> */}
+        <Route path="/" component={Dashboard} />
       </Switch>
     </Router>
   </Provider>

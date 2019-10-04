@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, FormContainer, Input, Button } from './StyledComponents';
+import { Title, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createUser } from '../actions';
 import { Link, withRouter } from 'react-router-dom';
@@ -39,13 +39,13 @@ class CreateAccount extends Component {
 
     if (loading) {
       return (
-        <Loader type={'User'}/>
+        <Loader type={'User'} />
       )
     }
 
     return (
       <FormContainer>
-        <Header>Create Account</Header>
+        <Title>Create Account</Title>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Email: </label>

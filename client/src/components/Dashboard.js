@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Header } from './StyledComponents';
+import { Title } from './StyledComponents';
 import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
 
@@ -11,8 +11,8 @@ class Dashboard extends Component {
     const { currentUser } = this.props;
     return (
       <div>
-        {/* <Header>Welcome {currentUser.json.legal_names[0]}!</Header> */}
-        <Header>Welcome User!</Header>
+        {/* <Title>Welcome {currentUser.json.legal_names[0]}!</Header> */}
+        <Title>Welcome User!</Title>
         <TransactionForm />
         <TransactionList />
       </div>

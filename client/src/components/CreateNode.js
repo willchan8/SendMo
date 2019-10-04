@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, FormContainer, Input, Button } from './StyledComponents'; 
+import { Title, FormContainer, Input, Button } from './StyledComponents'; 
 import { connect } from 'react-redux';
 import { createNode } from '../actions';
 import { Link, withRouter } from 'react-router-dom';
@@ -45,7 +45,7 @@ class CreateNode extends Component {
 
     return (
       <FormContainer>
-        <Header>Create an ACH-US Node</Header>
+        <Title>Create an ACH-US Node</Title>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Account Nickname: </label>

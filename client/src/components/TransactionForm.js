@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, FormContainer, Input, Button, Select } from './StyledComponents'; 
+import { Title, FormContainer, Input, Button, Select } from './StyledComponents'; 
 import { connect } from 'react-redux';
 import { createTransaction } from '../actions';
 
@@ -40,7 +40,7 @@ class TransactionForm extends Component {
 
     return (
       <FormContainer>
-        <Header>Create Transaction</Header>
+        <Title>Create Transaction</Title>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>To: </label>

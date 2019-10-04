@@ -11,9 +11,10 @@ export const FormContainer = styled.div`
   font-family: 'Roboto', sans-serif;
 `;
 
-export const Header = styled.h1`
+export const Title = styled.div`
   text-align: center;
   margin: 10px 0px;
+  font-size: 30px;
 `
 
 export const Input = styled.input`
@@ -48,9 +49,3 @@ export const Select = styled.select`
   margin-top: -4px;
   margin-bottom: 16px;
 `;
-
-export const Aligner = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
