@@ -48,3 +48,25 @@ export const Select = styled.select`
   margin-top: -4px;
   margin-bottom: 16px;
 `;
+
+export const ListContainer = styled.div`
+  flex: 1;
+  background: #FFFFFF;
+  margin: auto 2rem;
+  height: auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid #FBFBFB;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
+  overflow-y: scroll;
+`
+
+export const ProfileContainer = styled.div`
+  background: #FFFFFF;
+  margin: auto;
+  max-width: 365px;
+  padding: 1rem 1.5rem;
+  border: 1px solid #FBFBFB;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
+`;

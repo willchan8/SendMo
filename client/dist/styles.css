@@ -41,19 +41,23 @@ main, header, section, aside, footer {
   margin: 0px 10px;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 1rem;
+  max-height: 578px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  
+@media only screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

@@ -43,7 +43,7 @@ class TransactionForm extends Component {
         <Title>Create Transaction</Title>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label>To: </label>
+            <label>Make a Payment To: </label>
               <Select>
                 <option>Another Test Name</option>
               </Select>
