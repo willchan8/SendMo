@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Header, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createUser } from '../actions';
+import { Link, withRouter } from 'react-router-dom';
 
 class CreateAccount extends Component {
   constructor(props) {
@@ -25,9 +26,12 @@ class CreateAccount extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    const { createUser, history } = this.props;
     const { email, phone_numbers, legal_names } = this.state;
 
-    this.props.createUser({ email, phone_numbers, legal_names });
+    createUser({ email, phone_numbers, legal_names });
+
+    history.push('/node');
   }
 
   render() {
@@ -59,6 +63,8 @@ class CreateAccount extends Component {
 
           <Button type="submit">Submit</Button>
         </form>
+
+        <Link to="/node"><Button>Go To Node</Button></Link>
       </FormContainer>
     )
   }
@@ -68,4 +74,4 @@ CreateAccount.propTypes = {
   createUser: PropTypes.func.isRequired
 };
 
-export default connect(null, { createUser })(CreateAccount);
+export default connect(null, { createUser })(withRouter(CreateAccount));

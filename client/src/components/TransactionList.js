@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getTransactions } from '../actions';
+import { Header } from './StyledComponents'; 
 
 class TransactionList extends Component {
-
   render() {
     return (
       <div>
-        <h1>Your Transactions</h1>
+        <Header>Your Recent Transactions</Header>
         {this.props.transactions.map(transaction => (
           <div key={transaction._id}>
             <div>{console.log(transaction)}</div>

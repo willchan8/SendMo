@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Header, FormContainer, Input, Button } from './StyledComponents'; 
 import { connect } from 'react-redux';
 import { createNode } from '../actions';
+import { Link, withRouter } from 'react-router-dom';
 
 class CreateNode extends Component {
   constructor(props) {
@@ -25,10 +26,11 @@ class CreateNode extends Component {
   handleSubmit(e) {
     e.preventDefault();
     
-    const { createNode, currentUser } = this.props;
+    const { createNode, currentUser, history } = this.props;
     const { nickname, name, account_num, routing_num } = this.state;
 
     createNode({ nickname, name, account_num, routing_num, currentUser });
+    history.push('/dashboard');
   }
 
   render() {
@@ -36,7 +38,7 @@ class CreateNode extends Component {
 
     return (
       <FormContainer>
-        <Header>Create ACH-US Node</Header>
+        <Header>Create an ACH-US Node</Header>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Account Nickname: </label>
@@ -58,7 +60,9 @@ class CreateNode extends Component {
             <Input type="text" name="routing_num" onChange={this.handleChange} value={routing_num} pattern=".{9}" required title="Must Be 9 Digits Long" />
           </div>
 
-          <Button primary type="submit">Submit</Button>
+          <Button type="submit">Submit</Button>
+
+          <Link to="/dashboard"><Button>Go To Dashboard</Button></Link>
         </form>
       </FormContainer>
     )
@@ -74,4 +78,4 @@ const mapStateToProps = state => ({
   currentUser: state.currentUser,
 });
 
-export default connect(mapStateToProps, { createNode })(CreateNode);
+export default connect(mapStateToProps, { createNode })(withRouter(CreateNode));
