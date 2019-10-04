@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Title, ProfileContainer } from './StyledComponents';
+import { TextSmall, TextBig, ItemContainer } from './StyledComponents';
 import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
 
@@ -11,13 +11,14 @@ class Dashboard extends Component {
     const { currentUser } = this.props;
     return (
       <div>
-        {/* <Title>Welcome {currentUser.json.legal_names[0]}!</Header> */}
         <div className="dashboard">
-          <div>
-            <ProfileContainer>
-              <Title>Welcome User!</Title>
-              <Title>Account Balance: $5000</Title>
-            </ProfileContainer>
+          <div className="col-left">
+            <ItemContainer>
+          {/* <Title>Welcome {currentUser.json.legal_names[0]}!</Header> */}
+              <TextSmall>Welcome, User!</TextSmall>
+              <TextSmall>Account Balance: </TextSmall>
+              <TextBig>$10000</TextBig>
+            </ItemContainer>
             <TransactionForm />
           </div>
           <TransactionList />

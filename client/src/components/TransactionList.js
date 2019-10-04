@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Title, ListContainer } from './StyledComponents';
+import { Title } from './StyledComponents';
 import TransactionItem from './TransactionItem';
 
 class TransactionList extends Component {
   render() {
     return (
-      <ListContainer>
+      <div className="list-container">
         <Title>Your Transaction History</Title>
-        {/* {this.props.transactions.map(transaction => (
-          <TransactionItem key={transaction._id} transaction={transaction} />
-        ))} */}
-        <TransactionItem />
-        <TransactionItem />
-        <TransactionItem />
-        <TransactionItem />
-        <TransactionItem />
-        <TransactionItem />
-
-      </ListContainer>
+          {/* {this.props.transactions.map(transaction => (
+            <TransactionItem key={transaction._id} transaction={transaction} />
+          ))} */}
+          <TransactionItem />
+          <TransactionItem />
+      </div>
     )
   }
 }
