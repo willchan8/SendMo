@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 main, header, section, aside, footer {
@@ -33,7 +33,7 @@ main, header, section, aside, footer {
   justify-content: center;
 }
 
-.pad {
+.spacing {
   padding: 10px;
 }
 

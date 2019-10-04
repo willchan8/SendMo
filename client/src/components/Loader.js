@@ -8,7 +8,7 @@ const Loader = props =>
     <FormContainer>
       <div className="center">
         <Spinner animation="border" />
-        <div className='pad'>{`Creating ${props.type}...`}</div>
+        <div className='spacing'>{`Creating ${props.type}...`}</div>
       </div>
     </FormContainer>
   )
