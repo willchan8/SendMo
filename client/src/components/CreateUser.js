@@ -4,6 +4,7 @@ import { Header, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createUser } from '../actions';
 import { Link, withRouter } from 'react-router-dom';
+import Loader from './Loader';
 
 class CreateAccount extends Component {
   constructor(props) {
@@ -30,11 +31,17 @@ class CreateAccount extends Component {
     const { email, phone_numbers, legal_names } = this.state;
 
     createUser({ email, phone_numbers, legal_names }, history);
-    // history.push('/node');
   }
 
   render() {
     const { email, password, phone_numbers, legal_names } = this.state;
+    const { loading } = this.props;
+
+    if (loading) {
+      return (
+        <Loader type={'User'}/>
+      )
+    }
 
     return (
       <FormContainer>
@@ -70,7 +77,12 @@ class CreateAccount extends Component {
 }
 
 CreateAccount.propTypes = {
-  createUser: PropTypes.func.isRequired
+  createUser: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
-export default connect(null, { createUser })(withRouter(CreateAccount));
+const mapStateToProps = state => ({
+  loading: state.loading
+});
+
+export default connect(mapStateToProps, { createUser })(withRouter(CreateAccount));

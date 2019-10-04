@@ -13,15 +13,16 @@ export const FormContainer = styled.div`
 
 export const Header = styled.h1`
   text-align: center;
+  margin: 10px 0px;
 `
 
 export const Input = styled.input`
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 6px;
+  margin-top: -4px;
   margin-bottom: 16px;
   resize: vertical;
 `;
@@ -44,6 +45,12 @@ export const Select = styled.select`
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 14px;
-  margin-top: 6px;
+  margin-top: -4px;
   margin-bottom: 16px;
 `;
+
+export const Aligner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

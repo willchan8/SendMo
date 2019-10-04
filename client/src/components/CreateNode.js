@@ -4,6 +4,7 @@ import { Header, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createNode } from '../actions';
 import { Link, withRouter } from 'react-router-dom';
+import Loader from './Loader';
 
 class CreateNode extends Component {
   constructor(props) {
@@ -34,6 +35,13 @@ class CreateNode extends Component {
 
   render() {
     const { nickname, name, account_num, routing_num } = this.state;
+    const { loading } = this.props;
+
+    if (loading) {
+      return (
+        <Loader type={'ACH-US Node'} />
+      )
+    }
 
     return (
       <FormContainer>
@@ -71,10 +79,12 @@ class CreateNode extends Component {
 CreateNode.propTypes = {
   createNode: PropTypes.func.isRequired,
   currentUser: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = state => ({
   currentUser: state.currentUser,
+  loading: state.loading,
 });
 
 export default connect(mapStateToProps, { createNode })(withRouter(CreateNode));

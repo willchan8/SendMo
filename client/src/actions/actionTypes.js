@@ -3,3 +3,7 @@ export const CREATE_USER = 'CREATE_USER';
 export const CREATE_NODE = 'CREATE_NODE';
 
 export const CREATE_TRANSACTION = 'CREATE_TRANSACTION';
+
+export const IS_LOADING = 'IS_LOADING';
+
+export const DONE_LOADING = 'DONE_LOADING';

@@ -6,8 +6,10 @@ html {
 
 body {
   font-family: "Roboto";
-  display: flex;
-  justify-content: center;
+}
+
+.pad {
+  padding: 10px;
 }
 
 /* Extra small devices (phones, 600px and down) */
