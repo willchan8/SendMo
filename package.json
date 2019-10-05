@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "heroku-postbuild": "webpack -p",
+    "build": "webpack -p",
     "react-dev": "webpack -d -w",
     "start": "node server/index.js"
   },
