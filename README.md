@@ -10,7 +10,7 @@ By William Chan
 3. Install dependencies using `npm install`
 4. Start webpack to compile a bundle.js file `npm run react-dev`
 5. In a separate terminal, start your server using `npm start`
-6. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+6. Open your browser and navigate to [http://localhost:8080](http://localhost:8080).
 7. Enjoy!
 
 ## Discussion
