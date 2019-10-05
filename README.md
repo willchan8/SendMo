@@ -15,4 +15,4 @@ By William Chan
 
 ## Discussion
 
-The technologies I used to build this app include: React, Redux, Webpack, HTML, and CSS/Styled Components.
+The technologies I used to build this app include: React, Redux, Webpack, HTML, CSS/Styled Components, and SynapseFI API.
