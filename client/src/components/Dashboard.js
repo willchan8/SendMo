@@ -13,10 +13,10 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="col-left">
           <ItemContainer>
-        {/* <TitleSmall>Welcome {currentUser.json.legal_names[0]}!</TitleSmall> */}
+            {/* <TitleSmall>Welcome, {currentUser.json.legal_names[0]}!</TitleSmall> */}
             <TitleSmall>Welcome, User!</TitleSmall>
             <TitleSmall>Available Balance: </TitleSmall>
-            <Balance>$10000</Balance>
+            <Balance>$5000.00</Balance>
           </ItemContainer>
           <TransactionForm />
         </div>

@@ -46,11 +46,19 @@ export const createNode = (accountInfo, history) => dispatch => {
 }
 
 export const createTransaction = (nodeInfo) => dispatch => {
+  dispatch({ type: IS_LOADING, payload: true });
+
   axios.post('/api/users/nodes/transactions/create', nodeInfo)
   .then(transaction =>
     dispatch({
       type: CREATE_TRANSACTION,
       payload: transaction.data.json
+    })
+  )
+  .then(() =>     
+    dispatch({
+      type: DONE_LOADING,
+      payload: false
     })
   )
   .catch(error => {

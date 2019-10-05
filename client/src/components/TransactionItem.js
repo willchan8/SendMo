@@ -5,12 +5,12 @@ import { TextSmall } from './StyledComponents';
 const TranasactionItem = props => 
   (
     <div className="transaction">
-      <div>
+      <div className="row">
         <div>Another Test Name</div>
-        <TextSmall>Description: Payment</TextSmall>
+        <div>$10000.00</div>
       </div>
-      <div>
-        <div>$100.00</div>
+      <div className="row">
+        <TextSmall>Description: Payment</TextSmall>
         <TextSmall>10/4/2019</TextSmall>
       </div>
     </div>
@@ -21,7 +21,7 @@ const TranasactionItem = props =>
     //     <TextSmall>{props.transaction.extra.note}</TextSmall>
     //   </div>
     //   <div>
-    //     <div>{props.transaction.amount.amount}</div>
+    //     <div>${props.transaction.amount.amount.toFixed(2)}</div>
     //     <TextSmall>
     //       {`
     //         ${(new Date(props.transaction.extra.created_on)).getMonth() + 1}/${(new Date(props.transaction.extra.created_on)).getDate()}/${(new Date(props.transaction.extra.created_on)).getFullYear()}

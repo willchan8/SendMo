@@ -37,6 +37,7 @@ class TransactionForm extends Component {
 
   render() {
     const { amount, note } = this.state;
+    const { loading } = this.props;
 
     return (
       <ItemContainer>
@@ -51,7 +52,7 @@ class TransactionForm extends Component {
 
           <div>
             <label>Amount: </label>
-            <Input type="text" name="amount" onChange={this.handleChange} value={amount} />
+            <Input type="number" name="amount" onChange={this.handleChange} value={amount} required step=".01" min="0.01" />
           </div>
 
           <div>
@@ -59,7 +60,7 @@ class TransactionForm extends Component {
             <Input type="text" name="note" onChange={this.handleChange} value={note} />
           </div>
 
-          <Button primary type="submit">Send Payment</Button>
+          <Button type="submit">{loading ? "Processing..." : "Send Payment"}</Button>
         </form>
       </ItemContainer>
     )
@@ -69,10 +70,12 @@ class TransactionForm extends Component {
 TransactionForm.propTypes = {
   createTransaction: PropTypes.func.isRequired,
   currentNode: PropTypes.object.isRequired,
+  loading: PropTypes.bool,
 };
 
 const mapStateToProps = state => ({
   currentNode: state.currentNode,
+  loading: state.loading,
 });
 
 export default connect(mapStateToProps, { createTransaction })(TransactionForm);

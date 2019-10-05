@@ -22,7 +22,13 @@ html, body {
 
 .transaction {
   border-bottom: 1px solid #eaeaea;
-  padding: 10px 0px;
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,30 +44,11 @@ html, body {
   max-width: 900px;
 }
 
-.list-container {
-  flex: 1;
-  background: #FFFFFF;
-  margin-left: 1rem;
-  padding: 1rem 1.5rem;
-  border: 1px solid #FBFBFB;
-  border-radius: 4px;
-  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
-  max-height: 660px;
-  overflow-y: scroll;
-  max-width: 365px;
-}
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 768px) {
   .dashboard {
     flex-direction: column;
     height: auto;
-  }
-
-  .list-container {
-    width: 365px;
-    max-height: none;
-    margin: auto;
   }
 
   .col-left {

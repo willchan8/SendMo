@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { TitleSmall } from './StyledComponents';
+import { TitleSmall, ListContainer } from './StyledComponents';
 import TransactionItem from './TransactionItem';
 
 class TransactionList extends Component {
   render() {
     return (
-      <div className="list-container">
+      <ListContainer>
         <TitleSmall>Your Transaction History</TitleSmall>
           {/* {this.props.transactions.map(transaction => (
             <TransactionItem key={transaction._id} transaction={transaction} />
@@ -24,7 +24,7 @@ class TransactionList extends Component {
           <TransactionItem />
           <TransactionItem />
           <TransactionItem />
-      </div>
+      </ListContainer>
     )
   }
 }

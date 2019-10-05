@@ -27,6 +27,7 @@ export const HeaderContainer = styled.div `
 export const Title = styled.div`
   text-align: center;
   margin: 10px 0px;
+  max-width: 400px;
   font-size: 30px;
   @media (max-width: 768px) {
     font-size 25px;
@@ -73,6 +74,7 @@ export const Button = styled.button`
   background: #18A0B3;
   color: #FFFFFF;
   width: 100%;
+  max-height: 56px;
   font-size: 1em;
   padding: 1rem 0;
   margin: 1rem 0;
@@ -101,3 +103,20 @@ export const ItemContainer = styled.div`
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
 `;
+
+export const ListContainer = styled.div`
+  flex: 1;
+  background: #FFFFFF;
+  margin-left: 1rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #FBFBFB;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
+  max-height: 674px;
+  overflow-y: scroll;
+  @media (max-width: 768px) {
+    width: 365px;
+    max-height: none;
+    margin: auto;
+  }
+`
