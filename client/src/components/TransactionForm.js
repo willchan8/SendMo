@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Title, ItemContainer, Input, Button, Select } from './StyledComponents'; 
+import { TitleSmall, ItemContainer, Input, Button, Select } from './StyledComponents'; 
 import { connect } from 'react-redux';
 import { createTransaction } from '../actions';
 
@@ -40,12 +40,12 @@ class TransactionForm extends Component {
 
     return (
       <ItemContainer>
-        <Title>Create Transaction</Title>
+        <TitleSmall>Create Transaction</TitleSmall>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label>Make a Payment To: </label>
+            <label>Payment To: </label>
               <Select>
-                <option>Another Test Name</option>
+                <option>Another Test Name (NodeID: 5c8ac55542edab2b2665cbf1)</option>
               </Select>
           </div>
 
@@ -59,7 +59,7 @@ class TransactionForm extends Component {
             <Input type="text" name="note" onChange={this.handleChange} value={note} />
           </div>
 
-          <Button primary type="submit">Submit</Button>
+          <Button primary type="submit">Send Payment</Button>
         </form>
       </ItemContainer>
     )

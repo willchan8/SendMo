@@ -33,7 +33,7 @@ export const Title = styled.div`
   }
 `
 
-export const TextSmall = styled.div`
+export const TitleSmall = styled.div`
   text-align: center;
   margin: 10px 0px;
   font-size: 25px;
@@ -42,13 +42,20 @@ export const TextSmall = styled.div`
   }
 `
 
-export const TextBig = styled.div`
+export const Balance = styled.div`
   text-align: center;
   margin: 10px 0px;
-  font-size: 40px;
+  font-size: 50px;
+  font-weight: 900;
   @media (max-width: 768px) {
-    font-size 30px;
+    font-size 40px;
   }
+`
+
+export const TextSmall = styled.div`
+  font-size: 12px;
+  font-style: italic;
+  color: #8e8e8e;
 `
 
 export const Input = styled.input`
@@ -69,8 +76,9 @@ export const Button = styled.button`
   font-size: 1em;
   padding: 1rem 0;
   margin: 1rem 0;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  border: none;
 `;
 
 export const Select = styled.select`

@@ -1,31 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TextSmall } from './StyledComponents';
 
 const TranasactionItem = props => 
   (
     <div className="transaction">
-      <div>Transaction ID: ABCD1234ABCD</div>
-      <div>Date: 10/4/2019</div>
-      <div>To: Another Test Name</div>
-      <div>Description: Payment</div>
-      <div>Amount: $100.00</div>
+      <div>
+        <div>Another Test Name</div>
+        <TextSmall>Description: Payment</TextSmall>
+      </div>
+      <div>
+        <div>$100.00</div>
+        <TextSmall>10/4/2019</TextSmall>
+      </div>
     </div>
 
-    // <div>
-    //   <div>Transaction ID: {props.transaction._id}</div>
-    //   <div>Date: 
-    //     {`
-    //       ${(new Date(props.transaction.extra.created_on)).getMonth() + 1}/${(new Date(props.transaction.extra.created_on)).getDate()}/${(new Date(props.transaction.extra.created_on)).getFullYear()}
-    //     `}
+    // <div className="transaction">
+    //   <div>
+    //     <div>{props.transaction.to.user.legal_names[0]}</div>
+    //     <TextSmall>{props.transaction.extra.note}</TextSmall>
     //   </div>
-    //   <div>To: {props.transaction.to.user.legal_names[0]}</div>
-    //   <div>Description: {props.transaction.extra.note}</div>
-    //   <div>Amount: ${props.transaction.amount.amount}</div>
+    //   <div>
+    //     <div>{props.transaction.amount.amount}</div>
+    //     <TextSmall>
+    //       {`
+    //         ${(new Date(props.transaction.extra.created_on)).getMonth() + 1}/${(new Date(props.transaction.extra.created_on)).getDate()}/${(new Date(props.transaction.extra.created_on)).getFullYear()}
+    //       `}
+    //     </TextSmall>
+    //   </div>
     // </div>
   )
 
   TranasactionItem.propTypes = {
-    type: PropTypes.string
+    type: PropTypes.object
   }
 
 export default TranasactionItem;
