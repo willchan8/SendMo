@@ -12,10 +12,9 @@ const App = ({ store }) => (
     <Header />
     <Router>
       <Switch>
-        <Route exact path="/" component={CreateUser} /> */}
+        <Route exact path="/" component={CreateUser} />
         <Route path="/node" component={CreateNode} />
         <Route path="/dashboard" component={Dashboard} />
-        {/* <Route path="/" component={Dashboard} /> */}
       </Switch>
     </Router>
   </Provider>
@@ -25,4 +24,4 @@ App.propTypes = {
   store: PropTypes.object.isRequired
 }
 
-export default App
+export default App;

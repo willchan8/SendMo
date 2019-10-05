@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextSmall, ListContainer } from './StyledComponents';
+import { TextSmall } from './StyledComponents';
 
 
 class MockData extends Component {

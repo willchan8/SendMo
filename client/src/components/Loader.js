@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormContainer, Aligner } from './StyledComponents';
+import { FormContainer } from './StyledComponents';
 import Spinner from 'react-bootstrap/Spinner';
 
 const Loader = props => 

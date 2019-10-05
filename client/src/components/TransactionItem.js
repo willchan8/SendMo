@@ -21,7 +21,7 @@ const TranasactionItem = props =>
   )
 
   TranasactionItem.propTypes = {
-    type: PropTypes.object
+    transaction: PropTypes.object
   }
 
 export default TranasactionItem;

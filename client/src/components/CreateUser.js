@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Title, FormContainer, Input, Button } from './StyledComponents';
 import { connect } from 'react-redux';
 import { createUser } from '../actions';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Loader from './Loader';
 
 class CreateAccount extends Component {

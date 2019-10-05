@@ -13,8 +13,7 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="col-left">
           <ItemContainer>
-            {/* <TitleSmall>Welcome, {currentUser.json.legal_names[0]}!</TitleSmall> */}
-            <TitleSmall>Welcome, User!</TitleSmall>
+            <TitleSmall>Welcome, {currentUser.json.legal_names[0]}!</TitleSmall>
             <TitleSmall>Available Balance: </TitleSmall>
             <Balance>${balance.toFixed(2)}</Balance>
           </ItemContainer>

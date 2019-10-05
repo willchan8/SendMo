@@ -55,7 +55,7 @@ class TransactionForm extends Component {
           </div>
 
           <div>
-            <label>Amount: </label>
+            <label>Amount ($ USD): </label>
             <Input type="number" name="amount" onChange={this.handleChange} value={amount} placeholder="0.00" required step=".01" min="0.01" />
           </div>
 
@@ -74,8 +74,8 @@ class TransactionForm extends Component {
 TransactionForm.propTypes = {
   createTransaction: PropTypes.func.isRequired,
   currentNode: PropTypes.object.isRequired,
-  loading: PropTypes.bool,
-  balance: PropTypes.number,
+  loading: PropTypes.bool.isRequired,
+  balance: PropTypes.number.isRequired,
 };
 
 const mapStateToProps = state => ({
