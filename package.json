@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "sendmo",
   "version": "1.0.0",
-  "description": "React App Boilerplate.",
+  "description": "SendMo",
   "main": "index.js",
   "scripts": {
     "test": "jest",
