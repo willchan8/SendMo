@@ -8,7 +8,7 @@ import TransactionList from './TransactionList';
 
 class Dashboard extends Component {
   render() {
-    const { currentUser, currentNode } = this.props;
+    const { currentUser, currentNode, balance } = this.props;
     return (
       <div className="dashboard">
         <div className="col-left">
@@ -16,7 +16,7 @@ class Dashboard extends Component {
             {/* <TitleSmall>Welcome, {currentUser.json.legal_names[0]}!</TitleSmall> */}
             <TitleSmall>Welcome, User!</TitleSmall>
             <TitleSmall>Available Balance: </TitleSmall>
-            <Balance>$5000.00</Balance>
+            <Balance>${balance.toFixed(2)}</Balance>
           </ItemContainer>
           <TransactionForm />
         </div>
@@ -29,11 +29,13 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
   currentUser: PropTypes.object.isRequired,
   currentNode: PropTypes.object.isRequired,
+  balance: PropTypes.number.isRequired,
 }
 
 const mapStateToProps = state => ({
   currentUser: state.currentUser,
   currentNode: state.currentNode,
+  balance: state.balance
 });
 
 export default connect(mapStateToProps)(Dashboard);

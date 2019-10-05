@@ -1,4 +1,4 @@
-import { CREATE_USER, CREATE_NODE, CREATE_TRANSACTION, IS_LOADING, DONE_LOADING } from './actionTypes';
+import { CREATE_USER, CREATE_NODE, CREATE_TRANSACTION, IS_LOADING, DONE_LOADING, DEDUCT_BALANCE } from './actionTypes';
 import axios from 'axios';
 
 export const createUser = (userInfo, history) => dispatch => {
@@ -45,7 +45,7 @@ export const createNode = (accountInfo, history) => dispatch => {
   });
 }
 
-export const createTransaction = (nodeInfo) => dispatch => {
+export const createTransaction = (nodeInfo) => (dispatch) => {
   dispatch({ type: IS_LOADING, payload: true });
 
   axios.post('/api/users/nodes/transactions/create', nodeInfo)
@@ -53,6 +53,12 @@ export const createTransaction = (nodeInfo) => dispatch => {
     dispatch({
       type: CREATE_TRANSACTION,
       payload: transaction.data.json
+    })
+  )
+  .then((data) => 
+    dispatch({
+      type: DEDUCT_BALANCE,
+      payload: data.payload.amount.amount
     })
   )
   .then(() =>     

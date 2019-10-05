@@ -10,10 +10,11 @@ export const FormContainer = styled.div`
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
 `;
 
-export const HeaderContainer = styled.div `
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: #f5f5f5;
+  color: #17bfcc;
   height: auto;
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
   font-size: 40px;
@@ -71,7 +72,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background: #18A0B3;
+  background: #17bfcc;
   color: #FFFFFF;
   width: 100%;
   max-height: 56px;

@@ -24,10 +24,14 @@ class TransactionForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const { createTransaction, currentNode } = this.props;
+    const { createTransaction, currentNode, balance } = this.props;
     const { amount, note, receiverNodeID } = this.state;
 
-    createTransaction({ amount, note, receiverNodeID, currentNode });
+    if (amount > balance) {
+      alert('Insufficient funds. Please ensure the amount does not exceed your available balance.');
+    } else {
+      createTransaction({ amount, note, receiverNodeID, currentNode });
+    }
 
     this.setState({
       amount: '',
@@ -52,12 +56,12 @@ class TransactionForm extends Component {
 
           <div>
             <label>Amount: </label>
-            <Input type="number" name="amount" onChange={this.handleChange} value={amount} required step=".01" min="0.01" />
+            <Input type="number" name="amount" onChange={this.handleChange} value={amount} placeholder="0.00" required step=".01" min="0.01" />
           </div>
 
           <div>
             <label>What is it for?: </label>
-            <Input type="text" name="note" onChange={this.handleChange} value={note} />
+            <Input type="text" name="note" onChange={this.handleChange} value={note} placeholder="Ex: Rent, Utilities, etc."/>
           </div>
 
           <Button type="submit">{loading ? "Processing..." : "Send Payment"}</Button>
@@ -71,11 +75,13 @@ TransactionForm.propTypes = {
   createTransaction: PropTypes.func.isRequired,
   currentNode: PropTypes.object.isRequired,
   loading: PropTypes.bool,
+  balance: PropTypes.number,
 };
 
 const mapStateToProps = state => ({
   currentNode: state.currentNode,
   loading: state.loading,
+  balance: state.balance,
 });
 
 export default connect(mapStateToProps, { createTransaction })(TransactionForm);

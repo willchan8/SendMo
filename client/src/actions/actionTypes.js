@@ -7,3 +7,5 @@ export const CREATE_TRANSACTION = 'CREATE_TRANSACTION';
 export const IS_LOADING = 'IS_LOADING';
 
 export const DONE_LOADING = 'DONE_LOADING';
+
+export const DEDUCT_BALANCE = 'DEDUCT_BALANCE';

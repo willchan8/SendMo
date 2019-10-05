@@ -22,26 +22,29 @@ html, body {
 
 .transaction {
   border-bottom: 1px solid #eaeaea;
-  padding: 15px 0px;
+  padding: 10px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.transaction:last-child { 
+  border-bottom: none;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0px 15px;
 }
-
-.transaction:last-child { border-bottom: none; }
 
 .dashboard {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 5.5rem auto;
-  max-width: 900px;
+  max-width: 850px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -12,10 +12,10 @@ const App = ({ store }) => (
     <Header />
     <Router>
       <Switch>
-        {/* <Route exact path="/" component={CreateUser} />
+        <Route exact path="/" component={CreateUser} /> */}
         <Route path="/node" component={CreateNode} />
-        <Route path="/dashboard" component={Dashboard} /> */}
-        <Route path="/" component={Dashboard} />
+        <Route path="/dashboard" component={Dashboard} />
+        {/* <Route path="/" component={Dashboard} /> */}
       </Switch>
     </Router>
   </Provider>
