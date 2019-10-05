@@ -45,5 +45,8 @@
       "@babel/preset-react"
     ],
     "plugins": []
+  },
+  "engines": {
+    "node": "12.8.1"
   }
 }
