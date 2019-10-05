@@ -1,7 +1,7 @@
 # SendMo
 A Money Transfer Application
 
-By [William Chan]
+By William Chan
 
 ## Instructions
 
