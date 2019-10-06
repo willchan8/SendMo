@@ -17,6 +17,8 @@ By William Chan
 
 The technologies I used to build this app include: React, Redux, Webpack, HTML, CSS/Styled Components, and SynapseFI API.
 
-## Deployed Link
+## Notes
 
-Application was deployed on Heroku: [https://sendmoapp.herokuapp.com/](https://sendmoapp.herokuapp.com/)
+- Implemented error handling on both client and server side.
+- Application is responsive on both smaller (mobile) and larger (desktop) screen sizes.
+- Application deployed on Heroku: [https://sendmoapp.herokuapp.com/](https://sendmoapp.herokuapp.com/).

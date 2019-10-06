@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { TitleSmall, Balance, ItemContainer } from './StyledComponents';
+import { TitleSmall, Balance, ItemContainer, DashContainer } from './StyledComponents';
 import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
 
@@ -10,7 +10,7 @@ class Dashboard extends Component {
   render() {
     const { currentUser, currentNode, balance } = this.props;
     return (
-      <div className="dashboard">
+      <DashContainer>
         <div className="col-left">
           <ItemContainer>
             <TitleSmall>Welcome, {currentUser.json.legal_names[0]}!</TitleSmall>
@@ -20,7 +20,7 @@ class Dashboard extends Component {
           <TransactionForm />
         </div>
         <TransactionList />
-      </div>
+      </DashContainer>
     )
   }
 }

@@ -4,7 +4,7 @@ export const FormContainer = styled.div`
   background: #FFFFFF;
   margin: 5.5rem auto;
   max-width: 365px;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
@@ -20,7 +20,7 @@ export const HeaderContainer = styled.div`
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
   font-size: 40px;
   font-family: 'Lobster', cursive;
-  padding: 5px;
+  padding: 0px 5px;
   position: fixed;
   width: 100%;
   top: 0px;
@@ -68,7 +68,7 @@ export const Input = styled.input`
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: -4px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   resize: vertical;
 `;
 
@@ -79,8 +79,8 @@ export const Button = styled.button`
   width: 100%;
   max-height: 56px;
   font-size: 1em;
-  padding: 1rem 0;
-  margin: 1rem 0;
+  padding: 0.8rem 0;
+  margin: 0.5rem 0;
   border-radius: 5px;
   cursor: pointer;
   border: none;
@@ -95,7 +95,7 @@ export const Select = styled.select`
   box-sizing: border-box;
   font-size: 14px;
   margin-top: -4px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 `;
 
 
@@ -103,7 +103,7 @@ export const ItemContainer = styled.div`
   background: #FFFFFF;
   margin-bottom: 1rem;
   max-width: 365px;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
@@ -114,15 +114,27 @@ export const ListContainer = styled.div`
   flex: 1;
   background: #FFFFFF;
   margin-left: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
-  max-height: 674px;
+  max-height: 696px;
   overflow-y: scroll;
   @media (max-width: 768px) {
     width: 365px;
     max-height: none;
     margin: auto;
+  }
+`
+
+export const DashContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 4.8rem auto 2rem;
+  max-width: 850px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
   }
 `

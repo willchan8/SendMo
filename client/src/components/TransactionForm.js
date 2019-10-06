@@ -41,12 +41,20 @@ class TransactionForm extends Component {
 
   render() {
     const { amount, note } = this.state;
-    const { loading } = this.props;
+    const { loading, currentNode } = this.props;
 
     return (
       <ItemContainer>
         <TitleSmall>Create Transaction</TitleSmall>
         <form onSubmit={this.handleSubmit}>
+
+          <div>
+            <label>Payment From: </label>
+              <Select>
+                <option>{currentNode.json.info.nickname}</option>
+              </Select>
+          </div>
+
           <div>
             <label>Payment To: </label>
               <Select>
