@@ -8,8 +8,7 @@ export const FormContainer = styled.div`
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
-`;
-
+`
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -70,8 +69,7 @@ export const Input = styled.input`
   margin-top: -4px;
   margin-bottom: 14px;
   resize: vertical;
-`;
-
+`
 
 export const Button = styled.button`
   background: #17bfcc;
@@ -84,8 +82,7 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   border: none;
-`;
-
+`
 
 export const Select = styled.select`
   width: 100%;
@@ -96,8 +93,7 @@ export const Select = styled.select`
   font-size: 14px;
   margin-top: -4px;
   margin-bottom: 14px;
-`;
-
+`
 
 export const ItemContainer = styled.div`
   background: #FFFFFF;
@@ -107,8 +103,7 @@ export const ItemContainer = styled.div`
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
-`;
-
+`
 
 export const ListContainer = styled.div`
   flex: 1;
