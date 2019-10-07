@@ -8,7 +8,7 @@ export const FormContainer = styled.div`
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
-`
+`;
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const HeaderContainer = styled.div`
   position: fixed;
   width: 100%;
   top: 0px;
-`
+`;
 
 export const Title = styled.div`
   text-align: center;
@@ -33,7 +33,7 @@ export const Title = styled.div`
   @media (max-width: 768px) {
     font-size 25px;
   }
-`
+`;
 
 export const TitleSmall = styled.div`
   text-align: center;
@@ -42,7 +42,7 @@ export const TitleSmall = styled.div`
   @media (max-width: 768px) {
     font-size 20px;
   }
-`
+`;
 
 export const Balance = styled.div`
   text-align: center;
@@ -52,13 +52,13 @@ export const Balance = styled.div`
   @media (max-width: 768px) {
     font-size 40px;
   }
-`
+`;
 
 export const TextSmall = styled.div`
   font-size: 12px;
   font-style: italic;
   color: #8e8e8e;
-`
+`;
 
 export const Input = styled.input`
   width: 100%;
@@ -69,7 +69,7 @@ export const Input = styled.input`
   margin-top: -4px;
   margin-bottom: 14px;
   resize: vertical;
-`
+`;
 
 export const Button = styled.button`
   background: #17bfcc;
@@ -82,7 +82,7 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   border: none;
-`
+`;
 
 export const Select = styled.select`
   width: 100%;
@@ -93,7 +93,7 @@ export const Select = styled.select`
   font-size: 14px;
   margin-top: -4px;
   margin-bottom: 14px;
-`
+`;
 
 export const ItemContainer = styled.div`
   background: #FFFFFF;
@@ -103,7 +103,7 @@ export const ItemContainer = styled.div`
   border: 1px solid #FBFBFB;
   border-radius: 4px;
   box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.1);
-`
+`;
 
 export const ListContainer = styled.div`
   flex: 1;
@@ -120,7 +120,7 @@ export const ListContainer = styled.div`
     max-height: none;
     margin: auto;
   }
-`
+`;
 
 export const DashContainer = styled.div`
   display: flex;
@@ -132,4 +132,4 @@ export const DashContainer = styled.div`
     flex-direction: column;
     height: auto;
   }
-`
+`;
