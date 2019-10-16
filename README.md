@@ -15,7 +15,7 @@ By William Chan
 
 ## Discussion
 
-The technologies I used to build this app include: React, Redux, Webpack, HTML, CSS/Styled Components, and SynapseFI API.
+The technologies I used to build this app include: React, Redux, Webpack, HTML, CSS/Styled Components, and SynapseFI API Client Library.
 
 ## Notes
 
@@ -28,3 +28,6 @@ The technologies I used to build this app include: React, Redux, Webpack, HTML, 
 - Allow users to login and logout
 - Allow users to create additional nodes
 - Use the Synapse "View User Transactions" API to update "transaction" state rather than adding response data from the "Create Transaction" API
+- Encrypt sensitive information such as passwords and account numbers
+- Persist user login info in a database
+- Add a transaction chart
