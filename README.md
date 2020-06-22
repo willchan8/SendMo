@@ -5,13 +5,12 @@ By William Chan
 
 ## Instructions
 
-1. Navigate to [repo](https://github.com/willchan8/SendMo.git).
-2. Clone locally using `git clone https://github.com/willchan8/SendMo.git`
-3. Install dependencies using `npm install`
-4. Start webpack to compile a bundle.js file `npm run react-dev`
-5. In a separate terminal, start your server using `npm start`
-6. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
-7. Enjoy!
+1. Navigate to [repo](https://github.com/willchan8/payrange).
+2. Open a terminal and clone locally using `git clone https://github.com/willchan8/payrange`.
+3. Change into the target directory using `cd payrange`. 
+4. Install dependencies using `npm install`.
+5. Start your server using `npm start`, which should also open `http://localhost:3000` in your default browser.
+6. Enjoy!
 
 ## Discussion
 
