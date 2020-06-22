@@ -3,15 +3,6 @@ A Money Transfer Application
 
 By William Chan
 
-## Instructions
-
-1. Navigate to [repo](https://github.com/willchan8/payrange).
-2. Open a terminal and clone locally using `git clone https://github.com/willchan8/payrange`.
-3. Change into the target directory using `cd payrange`. 
-4. Install dependencies using `npm install`.
-5. Start your server using `npm start`, which should also open `http://localhost:3000` in your default browser.
-6. Enjoy!
-
 ## Discussion
 
 The technologies I used to build this app include: React, Redux, Webpack, HTML, CSS/Styled Components, and SynapseFI API Client Library.
